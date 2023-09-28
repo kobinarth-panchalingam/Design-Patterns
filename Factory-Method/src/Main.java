@@ -1,7 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        DocumentFactory documentFactory = new DocumentFactory();
-        Document document = documentFactory.createDocument("Report");
-        System.out.println(document.generate());
+        DocumentFactory letterFactory = new LetterFactory();
+        Document letter = letterFactory.createDocument();
+        System.out.println(letter.generate());
+
+        DocumentFactory reportFactory = new ReportFactory();
+        Document report = reportFactory.createDocument();
+        System.out.println(report.generate());
+
+        DocumentFactory contractFactory = new ContractFactory();
+        Document contract = contractFactory.createDocument();
+        System.out.println(contract.generate());
     }
 }
